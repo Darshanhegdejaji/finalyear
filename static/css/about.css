@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  margin: 0%;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: #94f664;
+  padding: 10px 20px;
+  font-size: 80px;
+  text-align: center;
+  text-shadow: 3px 3px 4px #000000;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #45a049; /* Set background color to white */
+  padding: 15px 20px; /* Increase height of the navbar */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box-shadow */
+}
+
+.headingContainer {
+  display: flex;
+  align-items: center;
+}
+
+.brandHeading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Brand color */
+  margin-right: 20px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navul li {
+  margin-right: 20px;
+  padding: 10px 10px;
+  border-radius: 25px;
+}
+
+.navul li:hover {
+  background-color: #166b1a;
+}
+
+.navul li a {
+  text-decoration: none;
+  color: #fff; /* Text color */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.imagesvg {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  padding: 40px 100px;
+  border-spacing: 60px;
+}
+
+.container img {
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.container h1 {
+  font-size: 80px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container p {
+  font-size: 40px;
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: "Ubuntu", sans-serif;
+}
+
+.crop-recommendation {
+  padding: 0px 50px 20px 50px;
+}
+
+.crop-recommendation h1 {
+  font-size: 50px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.crop-recommendation p {
+  font-size: 30px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+footer {
+  padding: 10px;
+  background-color: #45a049;
+  color: white;
+}
+.footer-contents {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
