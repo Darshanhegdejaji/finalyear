@@ -172,7 +172,7 @@ def predict_disease():
 
                 goole_search_results = search(prompt,num=5)
 
-    return render_template('diseaseDetect.html',image_base64=img_base64, prediction1=label, diseaseprediction=clearLines,links=goole_search_results)
+    return render_template('diseaseDetect.html',image_base64=img_base64, prediction1=label, diseaseprediction=clearLines)
 
 @app.route('/recommendation')
 def recomendation():
