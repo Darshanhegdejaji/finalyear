@@ -7,7 +7,6 @@ import google.generativeai as genai
 import re
 import tensorflow as tf
 from googlesearch import search
-import config
 import base64
 
 GOOGLE_API_KEY = "AIzaSyCB6FzLSYiuhOxJOxMC6C4UnB8DkwxwNFU"
