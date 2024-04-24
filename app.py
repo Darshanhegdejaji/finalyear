@@ -80,16 +80,16 @@ label_map2 = {
     '55':	"tomato canker"
 }
 
-global model2
-model2 = load_model("leaf_classifier.keras")
+# global model2
+# model2 = load_model("leaf_classifier.keras")
 
-# json file
-with open("model_architecture.json", "r") as json_file:
-    loaded_model_json = json_file.read()
-# loaded_mod = model_from_json(loaded_model_json)
-loaded_mod = tf.keras.models.model_from_json(loaded_model_json)
-loaded_mod.load_weights("model_weights.h5")
-loaded_mod.compile(optimizer="adam", loss='categorical_crossentropy', metrics=['accuracy'])
+
+# with open("model_architecture.json", "r") as json_file:
+#     loaded_model_json = json_file.read()
+
+# loaded_mod = tf.keras.models.model_from_json(loaded_model_json)
+# loaded_mod.load_weights("model_weights.h5")
+# loaded_mod.compile(optimizer="adam", loss='categorical_crossentropy', metrics=['accuracy'])
 
 
 # global model3
@@ -152,16 +152,17 @@ def predict_disease():
 
            
 
-            pred = model2.predict(processed_image)[0].argmax()
+            # pred = model2.predict(processed_image)[0].argmax()
 
-            pred2 = loaded_mod.predict(processed_image)[0].argmax()
-            label = label_map.get(str(pred))
+            # pred2 = loaded_mod.predict(processed_image)[0].argmax()
+            # label = label_map.get(str(pred))
+            label = "not healthy"
 
             if label == "Healthy":
                 label2 = "Healthy"
                 clearLines = ["The plant is healthy. No disease detected."]
             else:
-                label2 = label_map2.get(str(pred2))
+                # label2 = label_map2.get(str(pred2))
                 prompt = f"Based on the symptoms {symptoms} and {label} and crop {crop} predict the disease and suggest the cure."
                 response = Gmodel.generate_content(prompt)
                 # Split the response text into a list of lines
