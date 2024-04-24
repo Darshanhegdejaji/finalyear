@@ -172,9 +172,9 @@ def predict_disease():
                 # Clean each line using regular expression
                 clearLines = [re.sub(r"[^\w\s\!\?\.\,]", "", line) for line in lines]
 
-                # goole_search_results = search(prompt,num=5)
+                goole_search_results = search(prompt,num=5)
 
-    return render_template('diseaseDetect.html',image_base64=img_base64, prediction1=label, diseaseprediction=clearLines)
+    return render_template('diseaseDetect.html',image_base64=img_base64, prediction1=label, diseaseprediction=clearLines,links=goole_search_results)
 
 @app.route('/recommendation')
 def recomendation():
