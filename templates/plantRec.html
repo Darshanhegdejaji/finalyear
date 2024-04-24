@@ -25,10 +25,10 @@
           <span></span>
         </div>
         <div class="nav-links" id="navLinks">
-          <a href="#">Home</a>
-          <a href="/about">About</a>
+          <a href="./home.html">Home</a>
+          <a href="./about.html">About</a>
           <a href="/team">Team</a>
-          <a href="/github">GitHub</a>
+          <a href="https://github.com/edsondsouza/plantLyf">GitHub</a>
         </div>
       </div>
     </nav>
@@ -99,12 +99,17 @@
       <input type="submit" value="Predict" />
     </form>
     <!-- Output -->
+    {% if pre%}
     <h3 class="prediction">Predicted Crop: {{ pre }}</h3>
+    {% endif %}
+
+    {%if prediction %}
     <ul>
       {% for line in prediction %}
       <li>{{ line }}</li>
       {% endfor %}
     </ul>
+    {% endif %}
 
     <!-- Footer Section -->
     <footer>

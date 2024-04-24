@@ -19,10 +19,10 @@
           <span></span>
         </div>
         <div class="nav-links" id="navLinks">
-          <a href="#">Home</a>
-          <a href="/about">About</a>
+          <a href="./home.html">Home</a>
+          <a href="./about.html">About</a>
           <a href="/team">Team</a>
-          <a href="/github">GitHub</a>
+          <a href="https://github.com/edsondsouza/plantLyf">GitHub</a>
         </div>
       </div>
     </nav>
@@ -64,25 +64,30 @@
     <div id="imagePreview">
           <img src="data:image/jpeg;base64,{{ image_base64 }}" alt="Uploaded Image"  />
     </div>
-
+      {% if prediction1 %}
     <h3>CNN model 1 prediction : {{prediction1}}</h3>
+    {% endif %}
     
     <br />
     <!-- <h3>CNN model 2 prediction : {{ prediction2 }}</h3> -->
     <!--not perfect-->
     <h3>Large Language Model:</h3>
     <br />
+    {% if diseaseprediction %}
     <ul>
       {% for line in diseaseprediction %}
       <li>{{ line }}</li>
       {% endfor %}
     </ul>
+    {% endif %}
+    {% if links %}
     <h3>google search result : </h3>
     <ul>
       {% for link in links %}
           <li><a href="{{ link }}">{{ link }}</a></li>
       {% endfor %}
       </ul>
+      {% endif %}
 
     <!-- Footer Section -->
     <footer>
