@@ -126,7 +126,13 @@ def main_page():
     # Render your main page template here
     return render_template("/home.html")
 
+@app.route('/about')
+def about() :
+    return render_template('about.html')
 
+@app.route('/team')
+def team():
+    return render_template('team.html')
     
 @app.route('/disease_detection')
 def detection():
