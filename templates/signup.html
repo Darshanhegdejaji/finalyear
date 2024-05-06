@@ -89,6 +89,7 @@
             // never save password to the db
           });
           //redirect to another page
+          localStorage.setItem("user",user);
           console.log("created");
           window.location.href = "/main";
         })

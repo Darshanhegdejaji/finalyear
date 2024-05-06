@@ -70,6 +70,7 @@
             last_login: dt,
             // never save password to the db
           });
+          localStorage.setItem("user",user);
           console.log("user logged in!");
           window.location.href = "/main";
         })

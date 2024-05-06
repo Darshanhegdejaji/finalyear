@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, redirect, url_for, session,current_app
 import numpy as np
 import pickle
 import cv2
@@ -8,6 +8,7 @@ import re
 import tensorflow as tf
 from googlesearch import search
 import base64
+from localStoragePy import localStoragePy
 
 GOOGLE_API_KEY = "AIzaSyCB6FzLSYiuhOxJOxMC6C4UnB8DkwxwNFU"
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -102,15 +103,23 @@ with open("rf_model.pkl", "rb") as file:
 
 with open("scaler.pkl", "rb") as file:
     loaded_scaler = pickle.load(file)
-    
+
+
     
 @app.route('/')
 def main_p():
+    local_storage = localStoragePy(current_app.name)
+    if local_storage.getItem('user') is not None:
+       return redirect(url_for('main_page'))
+    
     # Render your main page template here
     return render_template("/signup.html")
 
 @app.route("/signin") #here
 def signin():
+     local_storage = localStoragePy(current_app.name)
+     if local_storage.getItem('user') is not None:
+       return redirect(url_for('main_page'))
 
      if request.method == "POST":
          email = request.form.get("email")
