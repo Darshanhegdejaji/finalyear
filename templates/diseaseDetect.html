@@ -120,7 +120,8 @@
           reader.onload = function(e) {
             var image = document.createElement('img');
             image.src = e.target.result;
-            image.style.maxWidth = '100%';
+            image.style.maxWidth = '50%';
+            image.style.maxHeight = '50%';
             preview.appendChild(image);
 
             // Save the URL of the uploaded image in a hidden input field
