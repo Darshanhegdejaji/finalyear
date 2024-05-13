@@ -81,8 +81,8 @@ label_map2 = {
     '55':	"tomato canker"
 }
 
-# global model2
-# model2 = load_model("leaf_classifier.keras")
+global model2
+model2 = load_model("leaf_classifier.keras")
 
 
 # with open("model_architecture.json", "r") as json_file:
@@ -153,11 +153,11 @@ def predict_disease():
 
            
 
-            # pred = model2.predict(processed_image)[0].argmax()
+            pred = model2.predict(processed_image)[0].argmax()
 
             # pred2 = loaded_mod.predict(processed_image)[0].argmax()
-            # label = label_map.get(str(pred))
-            label = "RUST"
+            label = label_map.get(str(pred))
+           
             
 
             if label == "Healthy":
