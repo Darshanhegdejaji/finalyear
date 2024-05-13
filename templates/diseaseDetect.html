@@ -62,7 +62,7 @@
       <button type="submit" class="btn">Submit</button>
     </form>
     <div id="imagePreview">
-          <img src="data:image/jpeg;base64,{{ image_base64 }}" alt="Uploaded Image"  />
+          <img src="data:image/jpeg;base64,{{ image_base64 }}" alt="Uploaded Image" style="height: 150px; width: 150px;" />
     </div>
       {% if prediction1 %}
     <h3>CNN model 1 prediction : {{prediction1}}</h3>
@@ -120,8 +120,8 @@
           reader.onload = function(e) {
             var image = document.createElement('img');
             image.src = e.target.result;
-            image.style.maxWidth = '50%';
-            image.style.maxHeight = '50%';
+            image.style.maxWidth = '150px';
+            image.style.maxHeight = '150px';
             preview.appendChild(image);
 
             // Save the URL of the uploaded image in a hidden input field

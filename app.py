@@ -163,6 +163,7 @@ def predict_disease():
             if label == "Healthy":
                 # label2 = "Healthy"
                 clearLines = ["The plant is healthy. No disease detected."]
+                goole_search_results=""
             else:
                 # label2 = label_map2.get(str(pred2))
                 prompt = f"Based on the symptoms {symptoms} and {label} and crop {crop} predict the disease and suggest the cure."
